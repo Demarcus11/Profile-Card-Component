@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --clr-neutral-hsl-400: 0, 0%, 59%;
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(0, 0%, 59%);
+
+  --clr-primary-400: hsl(185, 75%, 39%);
+  --clr-primary-500: hsl(227, 10%, 46%);
+  --clr-primary-700: hsl(229, 23%, 23%);
+
+  --font-family-primary: "Kumbh Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 700;
+
+  --fs-200: 0.75rem;
+  --fs-300: 1rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.5rem;
+}
+
+/* Utilities */
+.grid-flow {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-flow[data-spacing="small"] {
+  gap: 0.5rem;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+}
+
+/* General Styles */
+body {
+  min-height: 100vh;
+  background-color: var(--clr-primary-400);
+  background-image: url("../images/bg-pattern-top.svg"),
+    url("../images/bg-pattern-bottom.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: -350px -500px, 700px 300px;
+  font-family: var(--font-family-primary);
+  color: var(--clr-neutral-400);
+  font-size: var(--fs-400);
+  display: grid;
+  place-content: center;
+}
+
+@media (max-width: 400px) {
+  body {
+    margin-inline: 1.5rem;
+  }
+}
+
+.card {
+  max-width: 26.25rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: var(--clr-neutral-100);
+}
+
+.card-image {
+  border-radius: 50%;
+  outline: 5px solid var(--clr-neutral-100);
+  margin-top: -50px;
+}
+
+.card-content {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-details {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.name-age {
+  gap: 0.5rem;
+}
+
+.name {
+  color: #000;
+  font-weight: var(--fw-bold);
+}
+
+.location {
+  font-size: var(--fs-200);
+}
+
+.card-footer {
+  text-align: center;
+  justify-content: space-between;
+  border-top: 1px solid hsl(var(--clr-neutral-hsl-400), 0.2);
+  padding: 1.5rem 3.125rem;
+}
+
+.number {
+  color: #000;
+  font-weight: var(--fw-bold);
+}
+
+.category {
+  font-size: var(--fs-200);
+  letter-spacing: 1.2px;
+}
